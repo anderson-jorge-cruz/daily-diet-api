@@ -1,0 +1,21 @@
+{
+	"name": "daily-diet-api",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start:dev": "tsx src\\server.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.2",
+		"@types/node": "^22.7.3",
+		"tsx": "^4.19.1",
+		"typescript": "^5.6.2"
+	},
+	"dependencies": {
+		"fastify": "^5.0.0"
+	}
+}
