@@ -2,6 +2,7 @@ import { afterAll, beforeAll, describe, it, beforeEach, expect } from 'vitest'
 import { app } from '../src/app'
 import request from 'supertest'
 import { execSync } from 'node:child_process'
+import { knex } from '../src/database'
 
 describe('Users Routes', () => {
 	beforeAll(async () => {
@@ -13,8 +14,8 @@ describe('Users Routes', () => {
 	})
 
 	beforeEach(() => {
-		execSync('npm run knex -- migrate:rollback --all')
-		execSync('npm run knex -- migrate:latest')
+		execSync('npm run knex migrate:rollback --all')
+		execSync('npm run knex migrate:latest')
 	})
 
 	it('should be able to create a new user', async () => {
